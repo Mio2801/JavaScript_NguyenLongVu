@@ -1,0 +1,3 @@
+//aaaaa
+/* aaaaa */
+var myName;

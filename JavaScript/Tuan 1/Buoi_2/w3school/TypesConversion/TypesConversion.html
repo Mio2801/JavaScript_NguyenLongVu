@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Numbers</h1>
+<h2>The Number() Method</h2>
+
+<p>The Number() metod converts a variable (or value) into a number:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+Number("3.14") + "<br>" +
+Number(Math.PI) + "<br>" +
+Number("    ") + "<br>" +
+Number("") + "<br>" +
+Number("99 88") + "<br>" +
+Number("John") + "<br>";
+
+// Converting Strings to Numbers
+Number("3.14")
+Number(Math.PI)
+Number(" ")
+Number("")
+
+// Converting Numbers to Strings
+String(x)         // returns a string from a number variable x
+String(123)       // returns a string from a number literal 123
+String(100 + 23)  // returns a string from a number from an expression
+
+// Converting Dates to Numbers
+d = new Date();
+Number(d)
+
+// Converting Booleans to Numbers
+Number(false)     // returns 0
+Number(true)      // returns 1
+
+// Converting Booleans to Strings
+false.toString()   // returns "false"
+true.toString()    // returns "true"
+
+</script>
+
+</body>
+</html>

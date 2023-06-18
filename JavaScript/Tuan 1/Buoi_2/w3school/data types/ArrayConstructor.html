@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+
+<p>This "home made" isArray() function returns true when used on an array:</p>
+
+<p id="demo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple"];
+document.getElementById("demo").innerHTML = isArray(fruits);
+
+function isArray(myArray) {
+  return myArray.constructor.toString().indexOf("Array") > -1;
+}
+
+function isArray(myArray) {
+  return myArray.constructor === Array;
+}
+
+function isDate(myDate) {
+  return myDate.constructor.toString().indexOf("Date") > -1;
+}
+
+function isDate(myDate) {
+  return myDate.constructor === Date;
+}
+</script>
+
+<a href="javascript:void(0);">
+    Useless link
+  </a>
+  
+  <a href="javascript:void(document.body.style.backgroundColor='red');">
+    Click me to change the background color of body to red
+  </a>
+  
+</body>
+</html>
