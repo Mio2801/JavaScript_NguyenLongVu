@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apply</title>
+</head>
+<body>
+    <script>const person = {
+        fullName: function() {
+          return this.firstName + " " + this.lastName;
+        }
+      }
+      
+      const person1 = {
+        firstName: "Mary",
+        lastName: "Doe"
+      }
+      
+      // This will return "Mary Doe":
+      //The call() method takes arguments separately.
+
+//The apply() method takes arguments as an array.
+const person = {
+    fullName: function(city, country) {
+      return this.firstName + " " + this.lastName + "," + city + "," + country;
+    }
+  }
+  
+  const person1 = {
+    firstName:"John",
+    lastName: "Doe"
+  }
+  
+  person.fullName.call(person1, "Oslo", "Norway");
+  Math.max.apply(null, [1,2,3]);
+  Math.max.apply(Math, [1,2,3]); // Will also return 3
+    </script>
+</body>
+</html>

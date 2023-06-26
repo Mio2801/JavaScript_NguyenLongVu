@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invocation</title>
+</head>
+<body>
+    <script>
+
+        function myFunction(a, b) {
+            return a * b;
+          }
+          myFunction(10, 2);
+          function myFunction(a, b) {
+            return a * b;
+          }
+          window.myFunction(10, 2);
+          //the this keyword refers to an object.
+          //Which object depends on how this is being invoked (used or called)
+          //In an object method, this refers to the object.
+          //Alone, this refers to the global object.
+          //In a function, this refers to the global object.
+          //In a function, in strict mode, this is undefined.
+          //In an event, this refers to the element that received the event.
+          //Methods like call(), apply(), and bind() can refer this to any object.
+
+          let x = myFunction();            // x will be the window object
+
+function myFunction() {
+  return this;
+}
+/*
+const myObject = {
+    firstName:"John",
+    lastName: "Doe",
+    fullName: function () {
+      return this.firstName + " " + this.lastName;
+    }
+  }
+  */
+  myObject.fullName(); 
+  const myObject = {
+    firstName:"John",
+    lastName: "Doe",
+    fullName: function () {
+      return this;
+    }
+  }
+  
+  // This will return [object Object] (the owner object)
+  myObject.fullName();
+  // This is a function constructor:
+function myFunction(arg1, arg2) {
+    this.firstName = arg1;
+    this.lastName  = arg2;
+  }
+  
+  // This creates a new object
+  const myObj = new myFunction("John", "Doe");
+  
+  // This will return "John"
+  myObj.firstName;
+    </script>
+</body>
+</html>

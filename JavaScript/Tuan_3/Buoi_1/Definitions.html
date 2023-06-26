@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Definitions</title>
+</head>
+<body>
+    <script>
+        function myFunction(a, b) {
+            return a * b;
+          }
+          const x = function (a, b) {return a * b};
+          const myFunction = new Function("a", "b", "return a * b");
+
+          let a = myFunction(4, 3);
+       
+          let z = x(4, 3);
+
+          myFunction(5);
+
+          function myFunction(y) {
+            return y * y;
+          }
+          //Self-Invoking Functions
+          (function () {
+            let x = "Hello!!";  // I will invoke myself
+          })();
+          //Arrow Functions 
+        
+          
+          // ES6
+          const acc= (x, y) => { return x * y };
+          const arr = (x, y) => x * y;
+    </script>
+    
+</body>
+</html>

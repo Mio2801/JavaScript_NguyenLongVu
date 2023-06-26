@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName:"John",
+            lastName: "Doe",
+            fullName: function () {
+              return this.firstName + " " + this.lastName;
+            }
+          }
+          
+          // This will return "John Doe":
+          person.fullName();
+          const person = {
+            fullName: function() {
+              return this.firstName + " " + this.lastName;
+            }
+          }
+          const person1 = {
+            firstName:"John",
+            lastName: "Doe"
+          }
+          const person2 = {
+            firstName:"Mary",
+            lastName: "Doe"
+          }
+          
+          // This will return "John Doe":
+          person.fullName.call(person1);
+          const person = {
+            fullName: function() {
+              return this.firstName + " " + this.lastName;
+            }
+          }
+          const person1 = {
+            firstName:"John",
+            lastName: "Doe"
+          }
+          const person2 = {
+            firstName:"Mary",
+            lastName: "Doe"
+          }
+          
+          // This will return "Mary Doe"
+          person.fullName.call(person2);
+          const person = {
+            fullName: function(city, country) {
+              return this.firstName + " " + this.lastName + "," + city + "," + country;
+            }
+          }
+          
+          const person1 = {
+            firstName:"John",
+            lastName: "Doe"
+          }
+          
+          person.fullName.call(person1, "Oslo", "Norway");
+    </script>
+    
+</body>
+</html>
