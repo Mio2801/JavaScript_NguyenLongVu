@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+    let x = [{
+        name: "nha",
+        age: 24,
+        info () {
+            return `Name : ${this.name} Age : ${this.age}`;
+        }
+  
+    },[12,32,343,"hello"]];
+    let y = [`Le van Nha`,23,'nhalvfx@gmail.com',{name:'nha',age:24}];
+    let z = JSON.stringify(y);
+   document.querySelector("#demo").innerHTML = JSON.stringify(x);
+  console.log(JSON.parse(z));
+  </script>
+</body>
+</html>
