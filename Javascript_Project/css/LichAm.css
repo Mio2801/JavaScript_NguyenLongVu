@@ -1,0 +1,41 @@
+*{
+    font-family: "Roboto";
+}
+
+.tag{
+    background-color: #006e33;
+    border-radius: 10px;
+    padding: 4px 8px;
+    color: white;
+    margin-right: 1px;
+}
+
+.solar_calendar_date{
+    border: 1px solid #bcccc3;
+    border-radius: 4px;
+    color: #FF8700;
+    margin-left: 5px;
+}
+
+.lunar_calendar_date{
+    border: 1px solid #bcccc3;
+    border-radius: 4px;
+    color: #0B730B;
+    margin-left: 5px;
+}
+
+.lunar_calendar_table_item{
+    border: 1px solid #0B730B;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+tr,td{
+    border: 1px solid #bcccc3;
+    padding: 8px;
+}
+
+.NHTT:hover{
+    background-color: lightgray;
+}

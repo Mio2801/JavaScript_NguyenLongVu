@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi ngày âm dương</title>
+    <link rel="stylesheet" href="../css/ChuyenDoiAmDuong.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body style="background-color: #eee;">
+    <div class="Switch_lunar_solar container">
+        <h1 style="font-size: 26px; margin: 10px 0;"><b>Đổi ngày dương sang âm</b></h1>
+        <p>Công cụ <b>chuyển đổi ngày dương lịch sang âm lịch</b> sẽ giúp bạn chuyển đổi nhanh <b>ngày dương lịch</b>
+            bất kỳ sang <b>ngày
+                âm lịch</b> tương ứng. Để bắt đầu sử dụng công cụ chuyển đổi bạn vui lòng nhấp chọn vào ô bên dưới để
+            chọn ngày
+            dương lịch sau đó nhấp vào nút chuyển đổi. Nếu bạn không chọn ngày, hệ thống sẻ tự động lấy ngày dương lịch
+            hiện tại để chuyển đổi.</p>
+
+        <div class="bg-white" style="border-radius: 1px; font-size: 14px; color: #006e33; padding: 5px 10px;">
+            <strong><span>Lịch Âm</span><span style="color: lightgray; list-style: none;"> / </span><span>Đổi ngày dương
+                    sang âm</span></strong>
+        </div>
+        <h2 style="font-size: 20px;"><b>Chọn ngày dương lịch bất kỳ:</b></h2>
+        <input class="switch_lunar_solar_display" type="text" placeholder="dd/mm/yyyy">
+        <button class="switch_lunar_solar_btn">Chuyển đổi</button>
+        <h2 class="mt-5" style="font-size: 20px;"><b>Kết quả chuyển đổi:</b></h2>
+        <div class="switched_solar_calendar d-flex mb-2">
+            <i class="fa-solid fa-play" style="color: #000000; padding: 5px;"></i>
+            <p style="font-size: 18px; margin: 0;">Ngày <b>Dương Lịch</b>:</p>
+            <span class="switch_solar_calendar_date" id="solar_today">aaa</span>
+        </div>
+        <div class="switched_lunar_calendar d-flex mb-2">
+            <i class="fa-solid fa-play" style="color: #000000; padding: 5px;"></i>
+            <p style="font-size: 18px; margin: 0;">Ngày <b>Âm Lịch</b>:</p>
+            <span class="switch_lunar_calendar_date" id="lunar_today">aaa</span>
+        </div>
+
+        <div class="switch_lunar_calendar_table col-12 mt-5">
+            <div class="switch_lunar_calendar_table_item text-white"
+                style="padding-top: 14px; background-color: #006e33; border: 1px solid #519038;">
+                <h2>ÂM LỊCH & DƯƠNG LỊCH NGÀY 14</h2>
+            </div>
+            <div class="switch_lunar_calendar_table_item text-white" style="background-color: #0b730b;">
+                <div class="row">
+                    <h6 class="col-6" style="margin: 0; padding: 5px 0; border-right: 1px solid #519038;">Dương lịch
+                    </h6>
+                    <h6 class="col-6" style="margin: 0; padding: 5px 0; border-left: 1px solid #519038;">Âm lịch</h6>
+                </div>
+            </div>
+            <div class="switch_lunar_calendar_table_item">
+                <div class="row">
+                    <p class="col-6" style="margin: 0; padding: 5px 0; border-right: 1px solid #519038;">Tháng 7 Năm
+                        2023</p>
+                    <p class="col-6" style="margin: 0; padding: 5px 0; border-left: 1px solid #519038;">Tháng 5 Năm 2023
+                        (Quý Mão)</p>
+                </div>
+            </div>
+            <div class="switch_lunar_calendar_table_item">
+                <div class="row">
+                    <div class="col-6" style="border-right: 1px solid #519038;">
+                        <h1 style="color: #ff8700; font-size: 100px; padding-top: 50px;"><b>14</b></h1>
+                    </div>
+                    <div class="col-6" style="border-left: 1px solid #519038;">
+                        <h1 style="color: #0b730b; font-size: 100px; padding-top: 50px;"><b>27</b></h1>
+                        <p>Ngày: <b>Nhâm Thân</b>, Tháng: <b>Mậu Ngọ</b></p>
+                        <p>Tiết: <b>Tiểu thử</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="switch_lunar_calendar_table_item col-12 text-white p-1" style="background-color: #0b730b;">
+                <p class="m-0"><b>Giờ Hoàng Đạo (Giờ Tốt)</b></p>
+            </div>
+            <div class="switch_lunar_calendar_table_item col-12 p-2">
+                <p class="m-0">Tý (23-1), Sửu (1-3), Thìn (7-9), Tỵ (9-11), Mùi (13-15), Tuất (19-21)</p>
+            </div>
+        </div>
+
+        <h2 class="mt-5" style="font-size: 20px;"><b>Tìm hiểu thêm về âm lịch</b></h2>
+        <p>
+            <b>Âm lịch</b> là loại lịch được tính theo chu kỳ tròn khuyết của mặt trăng, tức là khoảng thời gian hai lần
+            liên tiếp trăng tròn hoặc không tròn. Bình quân cứ 29,53 ngày là một lần mặt trăng tròn khuyết tuy nhiên để
+            thuận lợi cho việc tính toán người xưa tính chẵn một đủ có 30 ngày, tháng thiếu có 29 ngày.
+        </p>
+        <p>
+            Từ thời xa xưa, khi con người chưa biết đến những thành tựu của khoa học công nghệ thì việc trồng trọt, chăn
+            nuôi hoàn toàn phụ thuộc vào việc “trông trời, trông đất, trông mây”. Nhờ có Âm lịch mà dân ta đã biết tính
+            toán ngày sản xuất bắt đầu mùa vụ, ngày thủy triều lên xuống hay việc tự mình dự đoán thời tiết để làm nông
+            nghiệp..
+        </p>
+        <p>
+            Ngày nay, âm lịch của Việt Nam thực chất là âm dương lịch, nghĩa là thời gian được tính theo chu kỳ của Mặt
+            Trăng nhưng các tháng nhuận lại được điều chỉnh theo quy luật để ăn khớp với năm dương lịch. Trong một năm
+            có 12 ngày tiết khí và 12 ngày trung khí được gọi là 24 ngày tiết, tên ngày tiết được đặt tên theo khí hậu
+            như xuân phân, hạ chí, đại hàn…việc sản xuất nông nghiệp, chăn nuôi, trồng trọt cũng dựa theo các ngày tiết
+            này.
+        </p>
+        <p>
+            Ngoài những ngày lễ dương lịch, người dân Việt Nam còn sử dụng cả âm lịch trong các ngày lễ truyền thống
+            quan trọng như tết Nguyên Đán, ngày giỗ tổ Hùng Vương, tết Đoan Ngọ, rằm Trung Thu, tết Ông Táo..cho đến
+            những ngày lễ tâm linh, mang ý nghĩa thiêng liêng như Thượng Nguyên, Trung Nguyên, Hạ Nguyên, Trùng Thập,
+            Trùng Cửu và cả ngày giỗ của ông bà tổ tiên trong gia đình.
+        </p>
+        <p>
+            Có thể thấy rằng âm lịch có vai trò quan trọng đối với đời sống sinh hoạt, sản xuất của người dân Việt Nam
+            từ xa xưa cho đến tận ngày nay.
+        </p>
+    </div>
+</body>
+
+</html>

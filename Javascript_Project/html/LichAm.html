@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra cứu lịch âm</title>
+    <link rel="stylesheet" href="../css/LichAm.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body style="background-color: #eee;">
+    <div class="Lunar_calendar_today container">
+        <h1 style="font-size: 26px; margin: 10px 0;">Lịch âm hôm nay</h1>
+        <h2 style="font-size: 12px;"><small class="tag"><b>xem lịch âm hôm nay</b></small></h2>
+        <div class="solar_calendar d-flex mb-2">
+            <p style="font-size: 18px; margin: 0;">Ngày <b>Dương Lịch</b>:</p>
+            <span class="solar_calendar_date" id="solar_today">aaa</span>
+        </div>
+        <div class="lunar_calendar d-flex mb-2">
+            <p style="font-size: 18px; margin: 0;">Ngày <b>Âm Lịch</b>:</p>
+            <span class="lunar_calendar_date" id="lunar_today">aaa</span>
+        </div>
+        <p>Ngày <b id="zodiac_day">NT</b> tháng <b id="zodiac_month">NM</b> năm <b id="zodiac_year">QM</b></p>
+        <p>Ngày <b id="Tianmen_day">TM</b>: <span id="Tianmen_context">a</span></p>
+        <p>Ngày <b id="path">HĐ</b>: <span id="zodiac1">Tý (23-1)</span>, <span id="zodiac2">Tý (23-1)</span>, <span
+                id="zodiac3">Tý (23-1)</span>, <span id="zodiac4">Tý (23-1)</span>, <span id="zodiac5">Tý (23-1)</span>,
+            <span id="zodiac6">Tý (23-1)</span>
+        </p>
+        <div class="d-flex">
+            <i class="fa-solid fa-tag fa-rotate-90" style="color: #000; margin:0 5px 5px 0; width: 20px;"></i>
+            <h2 style="font-size: 12px;">
+                <small class="tag"><b>xem lịch âm</b></small>
+                <small class="tag"><b>ngày âm lịch</b></small>
+                <small class="tag"><b>xem ngày tốt xấu</b></small>
+                <small class="tag"><b>lịch âm 2023 hôm nay</b></small>
+                <small class="tag"><b>âm lịch hôm nay là bao nhiêu</b></small>
+            </h2>
+        </div>
+        <div class="lunar_calendar_table col-12">
+            <div class="lunar_calendar_table_item text-white"
+                style="padding-top: 14px; background-color: #006e33; border: 1px solid #519038;">
+                <h2 id="table_first_row">ÂM LỊCH NGÀY 14 THÁNG 7 2023</h2>
+            </div>
+            <div class="lunar_calendar_table_item text-white" style="background-color: #0b730b;">
+                <div class="row">
+                    <h6 class="col-6" style="margin: 0; padding: 5px 0; border-right: 1px solid #519038;">Dương lịch
+                    </h6>
+                    <h6 class="col-6" style="margin: 0; padding: 5px 0; border-left: 1px solid #519038;">Âm lịch</h6>
+                </div>
+            </div>
+            <div class="lunar_calendar_table_item">
+                <div class="row">
+                    <p class="col-6" id="table_third_left_row" style="margin: 0; padding: 5px 0; border-right: 1px solid #519038;">Tháng 7 Năm
+                        2023</p>
+                    <p class="col-6" id="table_third_right_row" style="margin: 0; padding: 5px 0; border-left: 1px solid #519038;">Tháng 5 Năm 2023
+                        (Quý Mão)</p>
+                </div>
+            </div>
+            <div class="lunar_calendar_table_item">
+                <div class="row">
+                    <div id="table_fourth_left_row" class="col-6" style="border-right: 1px solid #519038;">
+                        <h1 style="color: #ff8700; font-size: 100px; padding-top: 50px;"><b>14</b></h1>
+                    </div>
+                    <div id="table_fourth_right_row" class="col-6" style="border-left: 1px solid #519038;">
+                        <h1 style="color: #0b730b; font-size: 100px; padding-top: 50px;"><b>27</b></h1>
+                        <p>Ngày: <b>Nhâm Thân</b>, Tháng: <b>Mậu Ngọ</b></p>
+                        <p>Tiết: <b>Tiểu thử</b></p>
+                    </div>
+                </div>
+            </div>
+            <div id="table_fifth_row" class="lunar_calendar_table_item col-12 text-white p-1" style="background-color: #0b730b;">
+                <p class="m-0"><b>Giờ Hoàng Đạo (Giờ Tốt)</b></p>
+            </div>
+            <div id="table_sixth_row" class="lunar_calendar_table_item col-12 p-2">
+                <p class="m-0">Tý (23-1), Sửu (1-3), Thìn (7-9), Tỵ (9-11), Mùi (13-15), Tuất (19-21)</p>
+            </div>
+        </div>
+
+        <table class="good_and_bad_day mb-5" style="background-color: white;">
+            <div class="lunar_calendar_table_item text-white mt-5"
+                style="padding-top: 14px; background-color: #006e33; border: 1px solid #519038;">
+                <h2>XEM NGÀY TỐT XẤU HÔM NAY</h2>
+            </div>
+            <tr>
+                <td id="one_left_row"><b>Giờ Hoàng Đạo</b></td>
+                <td id="one_right_row">Tí (23:00-0:59) ; Sửu (1:00-2:59) ; Thìn (7:00-8:59) ; Tỵ (9:00-10:59) ; Mùi (13:00-14:59) ; Tuất
+                    (19:00-20:59)</td>
+            </tr>
+            <tr>
+                <td id="two_left_row"><b>Giờ Hắc Đạo</b></td>
+                <td id="two_right_row">Dần (3:00-4:59) ; Mão (5:00-6:59) ; Ngọ (11:00-12:59) ; Thân (15:00-16:59) ; Dậu (17:00-18:59) ; Hợi
+                    (21:00-22:59)</td>
+            </tr>
+            <tr>
+                <td id="three_left_row"><b>Các Ngày Kỵ</b></td>
+                <td id="three_right_row">Phạm phải ngày : Sát chủ âm : Ngày Sát chủ âm là ngày kỵ các việc về mai táng, tu sửa mộ phần.</td>
+            </tr>
+            <tr>
+                <td id="four_left_row"><b>Ngũ Hành</b></td>
+                <td id="four_right_row">
+                    Ngày : nhâm thân
+                    <br>tức Chi sinh Can (Kim sinh Thủy), ngày này là ngày cát (nghĩa nhật).
+                    Nạp m: Ngày Kiếm phong Kim kị các tuổi: Bính Dần và Canh Dần.
+                    Ngày này thuộc hành Kim khắc với hành Mộc, ngoại trừ các tuổi: Mậu Tuất vì Kim khắc mà được lợi.
+                    Ngày Thân lục hợp với Tỵ, tam hợp với Tý và Thìn thành Thủy cục.
+                    | Xung Dần, hình Dần, hình Hợi, hại Hợi, phá Tỵ, tuyệt Mão.
+                </td>
+            </tr>
+            <tr>
+                <td id="five_left_row"><b>Bành Tổ Bách Kị Nhật</b></td>
+                <td id="five_right_row">- Nhâm : “Bất ương thủy nan canh đê phòng” - Không nên tiến hành tháo nước để tránh khó canh phòng
+                    đê điều
+
+                    <br>- Thân : “Bất an sàng quỷ túy nhập phòng” - Không nên tiến hành kê giường để tránh quỷ ma vào
+                    phòng
+                </td>
+            </tr>
+            <tr>
+                <td id="six_left_row"><b>Khổng Minh Lục Diệu</b></td>
+                <td id="six_right_row">
+                    Ngày : Đại an <br>
+                    tức ngày Cát, mọi việc đều được yên tâm, hành sự thành công.
+                    <br><b>Đại An gặp được quí nhân</b>
+                    <br><b>Có cơm có riệu tiền tiễn đưa</b>
+                    <br><b>Chẳng thời cũng được Đại An</b>
+                    <br><b>Bình an vô sự tấm thân thanh nhàn</b>
+                </td>
+            </tr>
+            <tr>
+                <td id="seven_left_row"><b>Nhị Thập Bát Tú Sao khuê</b></td>
+                <td id="seven_right_row">
+                    <b>Tên ngày</b>:Khuê mộc Lang - Mã Vũ: Xấu (Bình Tú) Tướng tinh con chó sói, chủ trị ngày thứ 5.
+                    <br>
+                    <b>Nên làm </b>:Tốt cho nhập học, cắt áo, tạo dựng nhà phòng hay ra đi cầu công danh. <br>
+                    <b>Kiêng cữ</b>: Chôn cất, trổ cửa dựng cửa, khai thông đường nước, việc khai trương, đào ao móc
+                    giếng, các vụ thưa kiện và đóng giường lót giường. Vì vậy, nếu quý bạn có ý định chôn cất người chết
+                    hay khai trường lập nghiệp thì nên chọn một ngày khác để tiến hành <br>
+                    <b>Ngoại lệ</b>: <br>
+                    - Sao Khuê là một trong Thất Sát Tinh, nếu đẻ con nhằm ngày này thì nên lấy tên của Sao Khuê cũng có
+                    thể lấy tên Sao của năm hay tháng mà đặt cho con dễ nuôi hơn. <br>
+                    - Sao Khuê Hãm Địa tại Thân nên Văn Khoa thất bại. Tại Ngọ thì chỗ Tuyệt gặp Sanh đắc lợi mưu sự,
+                    nhất là gặp Canh Ngọ. Tại Thìn thì tốt vừa vừa. <br>
+                    - Ngày Thân Sao Khuê Đăng Viên tức Tiến thân danh. <br>
+                    - Khuê: mộc lang (con sói): Mộc tinh, sao xấu. Khắc kỵ động thổ, an táng, khai trương cũng như sửa
+                    cửa. <br>
+                    - Ngày Thân Sao Khuê Đăng Viên tức Tiến thân danh. <br>
+                    - Khuê: mộc lang (con sói): Mộc tinh, sao xấu. Khắc kỵ động thổ, an táng, khai trương cũng như sửa
+                    cửa. <br><br>
+                    Khuê tinh tạo tác đắc trinh tường, <br>
+                    Gia hạ vinh hòa đại cát xương, <br>
+                    Nhược thị táng mai âm tốt tử, <br>
+                    Đương niên định chủ lưỡng tam tang. <br>
+                    Khán khán vận kim, hình thương đáo, <br>
+                    Trùng trùng quan sự, chủ ôn hoàng. <br>
+                    Khai môn phóng thủy chiêu tai họa, <br>
+                    Tam niên lưỡng thứ tổn nhi lang.
+                </td>
+            </tr>
+            <tr>
+                <td id="eight_left_row"><b>Thập Nhị Kiến Trừ TRỰC TRỪ</b></td>
+                <td id="eight_right_row">
+                    Động đất, ban nền đắp nền, thờ cúng Táo Thần, cầu thầy chữa bệnh bằng cách mổ xẻ hay châm cứu, bốc
+                    thuốc, xả tang, khởi công làm lò nhuộm lò gốm, nữ nhân khởi đầu uống thuốc chữa bệnh. <br>
+                    Đẻ con nhằm ngày này khó nuôi, nên làm Âm Đức cho con, nam nhân kỵ khởi đầu uống thuốc. <br>
+                </td>
+            </tr>
+            <tr>
+                <td id="nine_left_row"><b>Ngọc Hạp Thông Thư</b></td>
+                <td id="nine_right_row">
+                    <div class="NHTT d-flex">
+                        <p><b>Sao tốt</b><br>
+                            Thanh Long Hoàng Đạo: Tốt cho mọi việc Thiên phú (trực mãn): Tốt cho mọi việc, nhất là khai
+                            trương, việc xây dựng nhà cửa và an táng. Lộc khố: Tốt cho việc khai trương, kinh doanh, cầu
+                            tài, giao dịch Dịch Mã: Tốt cho mọi việc, nhất là việc xuất hành Sao Nguyệt Không: tốt cho
+                            việc sửa nhà, đặt giường
+                        </p>
+                        <p><b>Sao xấu</b><br>
+                            Thổ ôn (thiên cẩu): Kỵ việc xây dựng, xấu về tế tự (cúng bái), đào ao, đào giếng Hoang vu:
+                            Xấu cho mọi việc Cửu không: Kỵ việc xuất hành, kinh doanh, cầu tài, khai trương Sát chủ: Xấu
+                            cho mọi việc Tội chỉ: Xấu với việc cúng bái, tế tự, kiện cáo
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td id="ten_left_row"><b>Hướng xuất hành</b></td>
+                <td id="ten_right_row">
+                    Xuất hành hướng Chính Nam để đón 'Hỷ Thần'. Xuất hành hướng Chính Tây để đón 'Tài Thần'. <br>
+                    Tránh xuất hành hướng Tây Nam gặp Hạc Thần (xấu) <br>
+                </td>
+            </tr>
+            <tr>
+                <td id="eleven_left_row"><b>Giờ xuất hành Theo Lý Thuần Phong</b></td>
+                <td id="eleven_right_row">
+                    <b>Từ 11h-13h (Ngọ) và từ 23h-01h (Tý)</b>
+                    Mọi công việc đều được tốt lành, tốt nhất cầu tài đi theo hướng Tây Nam – Nhà cửa được yên lành.
+                    Người xuất hành thì đều bình yên.
+                    <br>
+                    <b>Từ 13h-15h (Mùi) và từ 01-03h (Sửu) </b>
+                    Mưu sự khó thành, cầu lộc, cầu tài mờ mịt. Kiện cáo tốt nhất nên hoãn lại. Người đi xa chưa có tin
+                    về. Mất tiền, mất của nếu đi hướng Nam thì tìm nhanh mới thấy. Đề phòng tranh cãi, mâu thuẫn hay
+                    miệng tiếng tầm thường. Việc làm chậm, lâu la nhưng tốt nhất làm việc gì đều cần chắc chắn.
+                    <br>
+                    <b>Từ 15h-17h (Thân) và từ 03h-05h (Dần)</b>
+                    Tin vui sắp tới, nếu cầu lộc, cầu tài thì đi hướng Nam. Đi công việc gặp gỡ có nhiều may mắn. Người
+                    đi có tin về. Nếu chăn nuôi đều gặp thuận lợi.
+                    <br>
+                    <b>Từ 17h-19h (Dậu) và từ 05h-07h (Mão) </b>
+                    Hay tranh luận, cãi cọ, gây chuyện đói kém, phải đề phòng. Người ra đi tốt nhất nên hoãn lại. Phòng
+                    người người nguyền rủa, tránh lây bệnh. Nói chung những việc như hội họp, tranh luận, việc quan,…nên
+                    tránh đi vào giờ này. Nếu bắt buộc phải đi vào giờ này thì nên giữ miệng để hạn ché gây ẩu đả hay
+                    cãi nhau.
+                    <br>
+                    <b>Từ 19h-21h (Tuất) và từ 07h-09h (Thìn) </b>
+                    Là giờ rất tốt lành, nếu đi thường gặp được may mắn. Buôn bán, kinh doanh có lời. Người đi sắp về
+                    nhà. Phụ nữ có tin mừng. Mọi việc trong nhà đều hòa hợp. Nếu có bệnh cầu thì sẽ khỏi, gia đình đều
+                    mạnh khỏe.
+                    <br>
+                    <b>Từ 21h-23h (Hợi) và từ 09h-11h (Tị) </b>
+                    Cầu tài thì không có lợi, hoặc hay bị trái ý. Nếu ra đi hay thiệt, gặp nạn, việc quan trọng thì phải
+                    đòn, gặp ma quỷ nên cúng tế thì mới an.
+                    <br>
+                </td>
+            </tr>
+        </table>
+        <h2 style="font-size: 20px;"><b>Nguồn gốc lịch âm</b></h2>
+        <p>
+            Lịch âm hay còn gọi là lịch vạn niên là loại lịch dựa trên các chu kỳ của tuần trăng. Loại lịch duy nhất.
+            Trên thực tế lịch âm là lịch của hồi giáo, trong đó mỗi năm chỉ chứa đúng 12 tháng Mặt Trăng. Đặc trưng của
+            lịch âm thuần túy, như trong trường hợp của lịch Hồi giáo, là ở chỗ lịch này là sự liên tục của chu kỳ trăng
+            tròn và hoàn toàn không gắn liền với các mùa. Vì vậy năm âm lịch Hồi giáo ngắn hơn mỗi năm dương lịch khoảng
+            11 hay 12 ngày, và chỉ trở lại vị trí ăn khớp với năm dương lịch sau mỗi 33 hoặc 34 năm Hồi giáo. Lịch Hồi
+            giáo được sử dụng chủ yếu cho các mục đích tín ngưỡng tôn giáo. Tại Ả Rập Saudi lịch cũng được sử dụng cho
+            các mục đích thương mại.
+        </p>
+        <p>
+            Phần lớn các loại lịch khác, dù được gọi là "âm lịch" hay lịch vạn niên, trên thực tế chính là âm dương
+            lịch. Điều này có nghĩa là trong các loại lịch đó, các tháng được duy trì theo chu kỳ của Mặt Trăng, nhưng
+            đôi khi các tháng nhuận lại được thêm vào theo một số quy tắc nhất định để điều chỉnh các chu kỳ trăng cho
+            ăn khớp lại với năm dương lịch. Hiện nay, trong tiếng Việt, khi nói tới âm lịch thì người ta nghĩ tới loại
+            lịch được lập dựa trên các cơ sở và nguyên tắc của lịch Trung Quốc, nhưng có sự chỉnh sửa lại theo UTC+7
+            thay vì UTC+8. Nó là một loại âm dương lịch theo sát nghĩa chứ không phải âm lịch thuần túy. Do cách tính âm
+            lịch đó khác với Trung Quốc cho nên Tết Nguyên đán của người Việt Nam đôi khi không hoàn toàn trùng với Xuân
+            tiết của người Trung Quốc và các quốc gia chịu ảnh hưởng bởi văn hóa Trung Hoa và vòng Văn hóa chữ Hán khác.
+        </p>
+        <p>
+            Do lịch âm thuần túy chỉ có 12 tháng âm lịch (tháng giao hội) trong mỗi năm, nên chu kỳ này (354,367 ngày)
+            đôi khi cũng được gọi là năm âm lịch.
+        </p>
+        <h2 style="font-size: 20px;"><b>Âm dương lịch</b></h2>
+        <p>
+            Âm dương lịch là loại lịch được nhiều nền văn hóa sử dụng, trong đó ngày tháng của lịch chỉ ra cả pha Mặt
+            Trăng (hay tuần trăng) và thời gian của năm Mặt Trời (dương lịch). Nếu năm Mặt Trời được định nghĩa như là
+            năm chí tuyến thì âm dương lịch sẽ cung cấp chỉ thị về mùa; nếu nó được tính theo năm thiên văn thì lịch sẽ
+            dự báo chòm sao mà gần đó trăng tròn (điểm vọng) có thể xảy ra. Thông thường luôn có yêu cầu bổ sung buộc
+            một năm chỉ chứa một số tự nhiên các tháng, trong phần lớn các năm là 12 tháng nhưng cứ sau mỗi 2 (hay 3)
+            năm lại có một năm với 13 tháng.
+        </p>
+    </div>
+</body>
+
+</html>
